@@ -4,14 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f6b7dc44-8904-460a-af17-d3a63b20ff84</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>History.py</StartupFile>
+    <StartupFile>Job\history.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>History</Name>
     <RootNamespace>History</RootNamespace>
-    <InterpreterId>CondaEnv|CondaEnv|env</InterpreterId>
+    <InterpreterId>CondaEnv|CondaEnv|terra-dev</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,10 +22,29 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="History.py" />
+    <Compile Include="Job\history.py" />
+    <Compile Include="Job\main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="my_c_search\lib.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="my_c_search\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Job\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="CondaEnv|CondaEnv|env" />
+    <InterpreterReference Include="CondaEnv|CondaEnv|terra-dev" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="my_c_search\" />
+    <Folder Include="Job\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="my_c_search\search.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
