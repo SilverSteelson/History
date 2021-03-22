@@ -42,14 +42,16 @@ class History:
             self.history_arr =np.append(self.history_arr,sequence)
             self.__main_dict=np.append(self.__main_dict,hash)
 
+    @staticmethod
+    @property
     def __hashash(self,sequence:int):
         cops = sequence.copy()
         right =  xxh32()
-        for it in cops:
-            right.update(it)
+        map(right.update,cops)
         return right.intdigest()
 
     @lru_cache()
+    @property
     def __search(self,hash:int):
 
         #a = process_time()
