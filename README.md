@@ -1,5 +1,5 @@
 # History
-This cat was born when solving problems of processing an array of hundreds of numbers on millions of consecutive ones, 
+This code was born at the job  ~~free administrator~~ Data Scientist interview ,when solving problems of processing an array of hundreds of numbers on millions of consecutive ones, 
 where it was necessary to save the unique ones, and count the repetitive ones and do it as quickly as possible.
 Since the "Technical task" was minimal - "Just do it!" 
 I wrote a script that uses all the power of the computer for this task 😉
